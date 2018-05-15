@@ -1,5 +1,4 @@
 <?php
-
    /*
       ESERCIZIO 1
       Parametri inseriti da terminale invocando il comando:
@@ -7,7 +6,9 @@
    */
    // $name = $argv[1];
    // $surname = $argv[2];
+?>
 
+<?php
    /*
       ESERCIZIO 2
       Parametri GET inseriti da URL
@@ -16,12 +17,15 @@
    // $surname = $_GET["surname"];
    //
    // echo 'Ciao ' .  $name . ' ' . $surname;
+?>
 
 
+
+<?php
    /*
-      ESERCIZIO 3
-      Il parametro GET intercetta la badword, la quale viene ricercata
-      nella porzione di testo inserita e sostituita da 3 asterischi
+   ESERCIZIO 3
+   Il parametro GET intercetta la badword, la quale viene ricercata
+   nella porzione di testo inserita e sostituita da 3 asterischi
    */
    $text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -35,8 +39,10 @@
    $test = "ciao a tutti";
    $censure = "***";
 
-   echo str_replace($badword, $censure, $text);
+   $text_length = strlen($text);
 
    // var_dump($badword);
 
 ?>
+<h3> Il testo è lungo  <?php echo $text_length; ?>  caratteri.</h3>
+<p> <?php  echo str_replace($badword, $censure, $text); ?> </p>
